@@ -65,6 +65,6 @@ alias http-server="python3 -m http.server"
 alias dd='echo "no dd command available :)"'
 
 # Display the custom aliases
-alias als="cat ~/.zsh_config/.aliases | grep -v -E '^#' | grep alias | cut -d ' ' -f 2 | cut -d '=' -f 1"
+alias als="cat ~/.zsh_config/aliases | grep -v -E '^#' | grep alias | cut -d ' ' -f 2 | cut -d '=' -f 1"
 # Display the custom functions
-alias funcs="cat ~/.zsh_config/.functions | grep function | cut -d ' ' -f 2 | cut -d '(' -f 1"
+alias funcs="cat ~/.zsh_config/functions | grep function | cut -d ' ' -f 2 | cut -d '(' -f 1"

@@ -36,6 +36,10 @@ function h() {
 	history | grep $1
 }
 
+function a() {
+	alias | grep $1
+}
+
 function pathadd() {
 	if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
 		PATH="${PATH:+"$PATH:"}$1"
