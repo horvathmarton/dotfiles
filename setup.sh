@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function doIt() {
+function main() {
 	rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
 		--exclude ".macos" \
@@ -11,13 +11,10 @@ function doIt() {
 	$(which zsh) ~/.zshrc;
 }
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
-	doIt;
-else
-	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
-	echo "";
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
-		doIt;
-	fi;
+read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
+echo "";
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+	main;
 fi;
-unset doIt;
+
+unset main;

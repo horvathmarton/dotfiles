@@ -1,5 +1,0 @@
-pathadd $HOME/scripts
-pathadd $HOME/.cargo/bin
-pathadd $HOME/.pyenv/bin
-pathadd /opt/flutter/bin
-pathadd $ANDROID_HOME/cmdline-tools/latest/bin
